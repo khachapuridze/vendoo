@@ -1,3 +1,21 @@
+
+@mixin for-responsive {
+    @media (max-width: 76rem) { 
+        @content;
+    }
+}
+@mixin font-md {
+    font-family: "BPG Algeti Compact", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;   
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+
+}
+
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 
 html {
@@ -8,6 +26,7 @@ body {
     margin: 0;
 }
 
+
 .footer-section {  
 
         position: fixed;
@@ -16,19 +35,19 @@ body {
         background-color: #f5f5f5;
         margin-top: auto;
 
-        @media screen and (max-width: 760px){
+        @include for-responsive {    
             position: unset;
         }
 
         &__top {
             display:flex;
             justify-content: space-between;
-            border-bottom: 1px solid #d4d4d4;
+            border-bottom: .1rem solid #d4d4d4;
             margin: 0 3%;
 
-            @media screen and (max-width: 760px){
+            @include for-responsive {    
                 position: none;
-                flex-direction: column;
+                @include flex-column;
             }
 
         }
@@ -37,17 +56,26 @@ body {
 
             padding: 0 0 10%;
 
-            @media screen and (max-width: 760px){
+            @include for-responsive {    
                 padding: 0;
-            }
+                text-align: center;
+                width: 100%;
+             }
 
         }
 
         &__blog {
 
-            display: flex;
-            flex-direction: column;
             width: 15%;
+            @include flex-column;
+            
+    
+
+            @include for-responsive {    
+                width: auto;
+                align-items: center;
+
+            }
 
 
             &__blog-article {
@@ -56,9 +84,8 @@ body {
                 align-items: center;
     
     
-                @media screen and (max-width: 760px){
+                @include for-responsive { 
                     flex-direction: column;
-                    align-items: flex-start;
                 }
                 
     
@@ -67,17 +94,16 @@ body {
                     height: 5rem;
                     padding-right: 1.5rem;
 
-                    @media screen and (max-width: 760px){
+                    @include for-responsive { 
                         padding: 1rem 0;
                     }
                 }
                 
                 .blog-link {
+                    @include font-md;
                     text-decoration: none;
                     color: rgb(31, 30, 30);
-                    font-size: 1.2rem;
-                    font-weight: 300;
-                    letter-spacing: 0.36px;
+                    letter-spacing: 0.036rem;
                     line-height: 1.3rem;
                 }
                 &:hover {
@@ -94,7 +120,7 @@ body {
             align-items: center;
             padding: 2rem 4rem;
 
-            @media screen and (max-width: 760px){
+            @include for-responsive { 
                 padding: 1rem 2rem;
             }
 
@@ -102,10 +128,9 @@ body {
                 display: flex;
                 align-items: center;
 
-                font-size: 12px;
-                font-weight: 300;
-                line-height: 27px;
-                margin-right: 5px;
+                @include font-md;
+                line-height: 2.7rem;
+                margin-right: .5rem;
                 vertical-align: top;
 
                 span {
@@ -120,6 +145,10 @@ body {
                 width: 25%;
                 justify-content: center;
 
+                @include for-responsive {    
+                    margin-bottom: 1rem;
+                }
+
                 a {
 
                     text-decoration: none;
@@ -127,7 +156,7 @@ body {
                     margin-right: 5%; 
                 }
                 .fa {
-                    border: 1px solid #e0e0e0;
+                    border: .1rem solid #e0e0e0;
                     border-radius: 50%;
                     padding: 1rem 1.2rem;
                     font-size: 1.5rem;    
@@ -144,9 +173,8 @@ body {
             justify-content: space-between;
             width: 100%;
 
-            @media screen and (max-width: 760px){
-                flex-direction: column;
-                align-items: flex-start;
+            @include for-responsive {    
+                @include flex-column;
                 padding: 1rem 2rem;
             }
         }
@@ -155,9 +183,7 @@ body {
             color: #1d1d1d;
             // font-family: "Deja Vu Sans";
             // font-family: 'Mukta', sans-serif;
-            font-family: "BPG Algeti Compact", sans-serif;
-            font-size: 1.2rem;
-            font-weight: 300;
+            @include font-md;
             line-height: 3rem;
         }
 
@@ -167,7 +193,7 @@ body {
             font-family: "BPG Algeti Compact", sans-serif;
             font-size: 1.4rem;
             font-weight: 300;
-            letter-spacing: 0.42px;
+            letter-spacing: 0.042rem;
         }
 
 
@@ -177,11 +203,7 @@ body {
             a {
                 text-decoration: none;
                 color: #1d1d1d;
-                // font-family: "Deja Vu Sans";
-                // font-family: 'Mukta', sans-serif;
-                font-family: "BPG Algeti Compact", sans-serif;
-                font-size: 1.2rem;
-                font-weight: 300;
+                @include font-md;
                 line-height: 3rem;
 
 
@@ -190,7 +212,7 @@ body {
                 text-decoration: underline;
                 
             }
-            }
+        }
     }        
 }
 
