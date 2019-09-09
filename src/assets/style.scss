@@ -1,5 +1,6 @@
 
 @import 'mixin';
+@import 'variable';
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 
 html {
@@ -15,7 +16,7 @@ body {
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: #f5f5f5;
+        background-color: $bg-color;
         margin-top: auto;
 
         @include md-up {
@@ -25,7 +26,7 @@ body {
         &__top {
             display:flex;
             justify-content: space-between;
-            border-bottom: .1rem solid #d4d4d4;
+            border-bottom: .1rem solid $light-gray;
             margin: 0 3%;
 
             @include md-up {
@@ -148,7 +149,7 @@ body {
                     margin-right: 2.5%;
                 }
                 .fa {
-                    border: .1rem solid #e0e0e0;
+                    border: .1rem solid $light-gray-2;
                     border-radius: 50%;
                     width: 4rem;
                     text-align: center;
@@ -176,7 +177,7 @@ body {
         &__copyright {
             color: #1d1d1d;
             // font-family: "Deja Vu Sans";
-            // font-family: 'Mukta', sans-serif;
+            font-family: $font-1;
             @extend .font-md;
             line-height: 3rem;
         }
@@ -184,7 +185,7 @@ body {
         &__title {
             color: #1d1d1d;
             // font-family: "Deja Vu Sans";
-            font-family: "BPG Algeti Compact", sans-serif;
+            font-family: $font-1;
             font-size: 1.4rem;
             font-weight: 300;
             letter-spacing: 0.042rem;
