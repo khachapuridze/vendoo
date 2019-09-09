@@ -175,7 +175,7 @@ body {
         }
 
         &__copyright {
-            color: #1d1d1d;
+            color: $black;
             // font-family: "Deja Vu Sans";
             font-family: $font-1;
             @extend .font-md;
@@ -183,7 +183,7 @@ body {
         }
 
         &__title {
-            color: #1d1d1d;
+            color: $black;
             // font-family: "Deja Vu Sans";
             font-family: $font-1;
             font-size: 1.4rem;
@@ -197,7 +197,7 @@ body {
 
             a {
                 text-decoration: none;
-                color: #1d1d1d;
+                color: $black;
                 @extend .font-md;
                 line-height: 3rem;
 
