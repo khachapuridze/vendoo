@@ -1,5 +1,42 @@
 
-@import 'mixin';
+// mixin-ები ცალკე გაიტანე _mixin.scss შექმენი და იქ დაწერე ყველა mixin
+
+@mixin for-responsive { // ეს კარგი მაგრამ სხვა რესპონსივის mixin-ები?
+    @media (max-width: 76rem) {
+        @content;
+    }
+}
+ // ესენი გამოიყენე
+@mixin xs-up {
+    @media (min-width: 22.5rem) { @content; }
+}
+@mixin sm-up {
+    @media (min-width: 36rem) { @content; }
+}
+@mixin md-up {
+    @media (min-width: 48rem) { @content; }
+}
+@mixin lg-up {
+    @media (min-width: 64rem) { @content; }
+}
+@mixin xl-up {
+    @media (min-width: 82rem) { @content; }
+}
+
+// mixin გამოიყენე მაშინ როცა რამე პარამეტრი გაქ გადასაცემი თორემ სხვა შემთხვევაში Extend/Inheritance იდიალურია
+
+@mixin font-md { // mixin ების მაგივრად https://www.sitepoint.com/the-benefits-of-inheritance-via-extend-in-sass/ ამას გადახედე
+    font-family: "BPG Algeti Compact", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+@mixin flex-column { // mixin ების მაგივრად https://www.sitepoint.com/the-benefits-of-inheritance-via-extend-in-sass/ ამას გადახედე
+    display: flex;
+    flex-direction: column;
+
+}
+
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 
 html {
@@ -10,6 +47,7 @@ body {
     margin: 0;
 }
 
+
 .footer-section {
 
         position: fixed;
@@ -18,7 +56,7 @@ body {
         background-color: #f5f5f5;
         margin-top: auto;
 
-        @include md-up {
+        @include for-responsive {
             position: unset;
         }
 
@@ -28,10 +66,9 @@ body {
             border-bottom: .1rem solid #d4d4d4;
             margin: 0 3%;
 
-            @include md-up {
+            @include for-responsive {
                 position: none;
-                display: flex;
-                flex-direction: column;
+                @include flex-column;
             }
 
         }
@@ -40,7 +77,7 @@ body {
 
             padding: 0 0 10%;
 
-            @include md-up {
+            @include for-responsive {
                 padding: 0;
                 text-align: center;
                 width: 100%;
@@ -51,12 +88,11 @@ body {
         &__blog {
 
             width: 15%;
-            display: flex;
-            flex-direction: column;
+            @include flex-column;
 
 
 
-            @include md-up {
+            @include for-responsive {
                 width: auto;
                 align-items: center;
 
@@ -69,7 +105,7 @@ body {
                 align-items: center;
 
 
-                @include md-up {
+                @include for-responsive {
                     flex-direction: column;
                 }
 
@@ -79,13 +115,13 @@ body {
                     height: 5rem;
                     padding-right: 1.5rem;
 
-                    @include md-up {
+                    @include for-responsive {
                         padding: 1rem 0;
                     }
                 }
 
                 .blog-link {
-                    @extend .font-md;
+                    @include font-md;
                     text-decoration: none;
                     color: rgb(31, 30, 30);
                     letter-spacing: 0.036rem;
@@ -113,16 +149,10 @@ body {
                 display: flex;
                 align-items: center;
 
-                @extend .font-md;
+                @include font-md;
                 line-height: 2.7rem;
                 margin-right: .5rem;
                 vertical-align: top;
-
-                @include xs-up {
-                    display: flex;
-                    flex-direction: column;
-
-                }
 
                 span {
                     margin-right: .5rem;
@@ -136,21 +166,20 @@ body {
                 width: 25%;
                 justify-content: center;
 
-                @include md-up {
+                @include for-responsive {
                     margin-bottom: 1rem;
-                    width: 100%;
                 }
 
                 a {
 
                     text-decoration: none;
                     color: rgb(31, 30, 30);
-                    margin-right: 2.5%;
+                    margin-right: 5%;
                 }
                 .fa {
                     border: .1rem solid #e0e0e0;
                     border-radius: 50%;
-                    padding: 1rem 1rem;
+                    padding: 1rem 1.2rem;
                     font-size: 1.5rem;
                     width: 2rem;
                     text-align: center;
@@ -165,9 +194,8 @@ body {
             justify-content: space-between;
             width: 100%;
 
-            @include md-up{
-                display: flex;
-                flex-direction: column;
+            @include for-responsive {
+                @include flex-column;
                 padding: 1rem 2rem;
             }
         }
@@ -176,7 +204,7 @@ body {
             color: #1d1d1d;
             // font-family: "Deja Vu Sans";
             // font-family: 'Mukta', sans-serif;
-            @extend .font-md;
+            @include font-md;
             line-height: 3rem;
         }
 
@@ -196,7 +224,7 @@ body {
             a {
                 text-decoration: none;
                 color: #1d1d1d;
-                @extend .font-md;
+                @include font-md;
                 line-height: 3rem;
 
 

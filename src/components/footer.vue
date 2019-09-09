@@ -15,9 +15,8 @@
                 <ul>
                   <li class="footer-section__list-item"><a href="">გადახდის საშუალებები</a></li>
                   <li class="footer-section__list-item"><a href="">გადახდის საშუალებები</a></li>
-                  <li class="footer-section__list-item">\<a href="">გადახდის საშუალებები</a></li>
+                  <li class="footer-section__list-item"><a href="">გადახდის საშუალებები</a></li>
                 </ul>
-                
 
           </div>
           <div class="footer-section__column">
@@ -91,6 +90,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style >
 
 </style>
