@@ -41,11 +41,11 @@
                <div class="footer-section__blog">
                    <h6 class="footer-section__title">ბლოგი</h6>
                   <div class="footer-section__blog__blog-article">
-                      <img  class="footer-section__blog__blog-article__blogimage" src="../assets/Image_86.png" alt="sda"><a  class="blog-link" href="">როგორ შევიძინოთ ტექნიკა ვენდუს საიტზე</a>
+                      <img  class="footer-section__blog__blog-article__blogimage" src="../assets/img/Image_86.png" alt="sda"><a  class="blog-link" href="">როგორ შევიძინოთ ტექნიკა ვენდუს საიტზე</a>
                   </div>
 
                   <div class="footer-section__blog__blog-article">
-                      <img class="footer-section__blog__blog-article__blogimage" src="../assets/Image_87.png" alt="sda"><a class="blog-link" href="">როგორ შევიძინოთ ტექნიკა ვენდუს საიტზე</a>
+                      <img class="footer-section__blog__blog-article__blogimage" src="../assets//img/Image_87.png" alt="sda"><a class="blog-link" href="">როგორ შევიძინოთ ტექნიკა ვენდუს საიტზე</a>
                   </div>
                </div>
           </div>
@@ -70,7 +70,7 @@
       <div class="footer-section__bottom__tbc">
         <span>Powerd by:</span>
         <a href="https://tbcbank.ge" target="_blank">
-        <img src="../assets/Image_61.png" alt="tbc bitch">
+        <img src="../assets//img/Image_61.png" alt="tbc bitch">
         </a>
       </div>
       </div>
