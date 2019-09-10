@@ -27,6 +27,7 @@
                 position: absolute;
                 z-index: -1;
                 height: 100%;
+                width: 100%;
                 
             }
         }
@@ -58,7 +59,7 @@
 
             @include md-up {
                 margin: 0;
-                font-size: 2.5rem;
+                font-size: 2rem;
                 margin-bottom: 4rem;
             }
         }
@@ -109,12 +110,12 @@
         right: 0;
         top: 2rem;
 
-        // @include sm-up {
-        //     justify-content: center;
-        //     right: unset;
-        //     width: unset;
+        @include md-up { 
 
-        // }
+            width: 90%;
+            justify-content: center;
+    
+        }
 
         @include sm-up  {
 

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <app-imageContainer></app-imageContainer>
     <app-infoContainer></app-infoContainer>
     <app-categories></app-categories>
     <app-footer/>
@@ -10,13 +11,15 @@
 import Footer from './components/footer.vue'
 import infoContainer from './components/infoContainer.vue'
 import categories from './components/categories.vue'
+import imageContainer from './components/imageContainer.vue'
 
 export default {
   name: 'app',
   components: {
     'app-footer':Footer,
     'app-infoContainer':infoContainer,
-    'app-categories': categories
+    'app-categories': categories,
+    'app-imageContainer': imageContainer
   
   }
 
