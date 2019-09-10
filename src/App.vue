@@ -1,16 +1,22 @@
 <template>
   <div id="app">
+    <app-infoContainer></app-infoContainer>
+    <app-categories></app-categories>
     <app-footer/>
   </div>
 </template>
 
 <script>
 import Footer from './components/footer.vue'
+import infoContainer from './components/infoContainer.vue'
+import categories from './components/categories.vue'
 
 export default {
   name: 'app',
   components: {
     'app-footer':Footer,
+    'app-infoContainer':infoContainer,
+    'app-categories': categories
   
   }
 }
