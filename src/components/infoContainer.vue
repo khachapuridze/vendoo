@@ -6,20 +6,34 @@
         <div class="info-container__desc">
             <h5>იპოვეთ თქვენთვის სასურველი პროდუქტი მარტივად</h5>
             <p>შეარჩიეთ საუკეთესო</p>
-            <button class="choose-banner" href="">შეარჩიე</button>
+            <button class="choose-banner" >
+                <a href="http://weshort.co/other?image=audio" target="_blank">
+                    შეარჩიე
+                </a>
+                
+                </button>
         </div>
         <div class="info-container__list">
             <div class="info-container__list-item">
-                <img src="https://vendoo.ge/media/wysiwyg/dinamiki-purple.png" alt="a">
+                <a href="http://weshort.co/other?image=crosleygrey" target="_blank">
+                    <img src="https://vendoo.ge/media/wysiwyg/dinamiki-purple.png" alt="a">
+                </a>
             </div>
             <div class="info-container__list-item">
-                <img src="https://vendoo.ge/media/wysiwyg/22.png" alt="b">
+                <a href="http://weshort.co/other?image=crosleygrey" target="_blank">
+                    <img src="https://vendoo.ge/media/wysiwyg/22.png" alt="b">
+                </a>
             </div>
             <div class="info-container__list-item">
-                <img src="https://vendoo.ge/media/wysiwyg/22.png" alt="c">
+                <a href="http://weshort.co/other?image=audio" target="_blank">
+                    <img src="https://vendoo.ge/media/wysiwyg/22.png" alt="c">
+                </a>
             </div>
             <div class="info-container__list-item">
-                <img src="https://vendoo.ge/media/wysiwyg/4_1.png" alt="d">
+                <a  href="http://weshort.co/other?image=audio" target="_blank">
+                    <img src="https://vendoo.ge/media/wysiwyg/4_1.png" alt="d">                
+                </a>
+
             </div>
 
         </div>

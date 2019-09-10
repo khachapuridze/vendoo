@@ -77,9 +77,6 @@
 
         .choose-banner {
             cursor: pointer;
-            font-size: 1.4rem;
-            font-weight: 400;
-            letter-spacing: .056rem;
             width: 14rem;
             border-radius: 4.4rem;
             background-color:$bg-color-2;  
@@ -87,8 +84,15 @@
             border: none;
             text-align: center;
             display: block;
-            line-height: 4.4rem;
-            color: $white;
+
+            a {
+                text-decoration: none;
+                line-height: 4.4rem;
+                letter-spacing: .056rem;
+                color: $white;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
 
             @include md-up {
                 margin-bottom: 5%;
@@ -105,19 +109,20 @@
         right: 0;
         top: 2rem;
 
-        @include md-up {
-            justify-content: center;
-            right: unset;
-            width: unset;
+        // @include sm-up {
+        //     justify-content: center;
+        //     right: unset;
+        //     width: unset;
 
-        }
+        // }
 
         @include sm-up  {
 
             position: unset;
             justify-content: center;
             margin: auto;
-            width: 100%;
+            right: unset;
+            width: unset;
 
         }
 
