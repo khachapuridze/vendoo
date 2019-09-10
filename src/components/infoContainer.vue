@@ -14,26 +14,10 @@
                 </button>
         </div>
         <div class="info-container__list">
-            <div class="info-container__list-item">
-                <a href="http://weshort.co/other?image=crosleygrey" target="_blank">
-                    <img src="https://vendoo.ge/media/wysiwyg/dinamiki-purple.png" alt="a">
+            <div class="info-container__list-item" :key="index" v-for="(x,index) in items">
+                <a  :href="x.href" target="_blank">
+                    <img :src="x.image" alt="a">
                 </a>
-            </div>
-            <div class="info-container__list-item">
-                <a href="http://weshort.co/other?image=crosleygrey" target="_blank">
-                    <img src="https://vendoo.ge/media/wysiwyg/22.png" alt="b">
-                </a>
-            </div>
-            <div class="info-container__list-item">
-                <a href="http://weshort.co/other?image=audio" target="_blank">
-                    <img src="https://vendoo.ge/media/wysiwyg/22.png" alt="c">
-                </a>
-            </div>
-            <div class="info-container__list-item">
-                <a  href="http://weshort.co/other?image=audio" target="_blank">
-                    <img src="https://vendoo.ge/media/wysiwyg/4_1.png" alt="d">                
-                </a>
-
             </div>
 
         </div>
@@ -48,8 +32,20 @@ export default {
 
     name: 'infoContainer',
     props: {
-        msg: String
+        msg: String,
+        
+    },
+    data (){
+    return {
+      items : [
+        {href:'http://weshort.co/other?image=audio',image:'https://vendoo.ge/media/wysiwyg/dinamiki-purple.png'},
+        {href:'http://weshort.co/other?image=crosleygrey',image:'https://vendoo.ge/media/wysiwyg/22.png'},
+        {href:'http://weshort.co/other?image=audio',image:'https://vendoo.ge/media/wysiwyg/3.png'},
+        {href:'http://weshort.co/other?image=audio',image:'https://vendoo.ge/media/wysiwyg/4_1.png'}
+      ]
     }
+    
+  }
 }
 
 </script>
