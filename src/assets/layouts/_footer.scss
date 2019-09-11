@@ -180,7 +180,13 @@
             font-size: 1.4rem;
             font-weight: 300;
             letter-spacing: 0.042rem;
+
+            a {
+                text-decoration: none;
+                color: $bg-color-2;
+            }
         }
+        
 
 
         &__list-item {

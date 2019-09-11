@@ -3,10 +3,9 @@
   <div class="footer-section">
     <div class="footer-section__top">
           <div class="footer-section__column">
-            <h6 class="footer-section__title">ჩემი ანგარიში</h6>
+            <h6 class="footer-section__title">ჩვენ შესახებ</h6>
                 <ul>
-                  <li class="footer-section__list-item"><a href="">კარიერა</a></li>
-                  <li class="footer-section__list-item"><a href="">გუნდი</a></li>
+                  <li class="footer-section__list-item"><a href="https://vendoo.ge/faq/usefulinfo/aboutus">რა არის Vendoo?</a></li>
                   
                 </ul>
           </div>
@@ -39,7 +38,9 @@
           </div>
 
                <div class="footer-section__blog">
-                   <h6 class="footer-section__title">ბლოგი</h6>
+                   <h6 class="footer-section__title">
+                     <a href="https://vendoo.ge/blog">ბლოგი</a>
+                     </h6>
                   <div class="footer-section__blog__blog-article">
                       <img  class="footer-section__blog__blog-article__blogimage" src="../assets/img/Image_86.png" alt="sda"><a  class="blog-link" href="">როგორ შევიძინოთ ტექნიკა ვენდუს საიტზე</a>
                   </div>
