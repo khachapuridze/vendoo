@@ -42,7 +42,7 @@
 
     &__items {
         background-color: $bg-color;
-        margin: 3rem 5rem;
+        margin: 3rem;
         display: flex;
         align-items: center;
         padding: 2rem 0.8rem;
@@ -53,20 +53,38 @@
         margin-right: 0;
 
 
+
         @include md-up {
             width: 37%;
+            margin-left: 0;
         }
 
         @include lg-up {
 
-            width: 37%;
+            width: 40%;
             justify-content: center;
+            margin-left: 0;
+            &:nth-child(odd) {
+                margin-left: 11%;
+            }
+
+            &:nth-child(even) {
+                margin-left: 3%;
+            }
 
         }
 
         @include sm-up {
             width: 100%;
             margin: 4rem 1rem;
+
+            &:nth-child(odd) {
+                margin-left: 1rem;
+            }
+            &:nth-child(even) {
+                margin-left: 1rem;
+            }
+
         }
 
 
