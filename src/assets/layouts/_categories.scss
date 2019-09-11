@@ -45,7 +45,7 @@
         margin: 3rem 5rem;
         display: flex;
         align-items: center;
-        padding: 2rem 0;
+        padding: 2rem 0.8rem;
         width: 20%;
         position: relative;
         text-align: center;
@@ -54,12 +54,12 @@
 
 
         @include md-up {
-            width: 43%;
+            width: 37%;
         }
 
         @include lg-up {
 
-            width: 40%;
+            width: 37%;
             justify-content: center;
 
         }
@@ -72,7 +72,7 @@
 
 
         img {
-            width: 70%;
+            width: 100%;
         }
 
         p {

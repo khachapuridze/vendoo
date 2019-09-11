@@ -16,7 +16,6 @@
         position: relative;
         margin:auto;
         overflow: hidden;
-        border-radius: 2.5rem;
 
         @include sm-up {
             width: inherit;
@@ -112,18 +111,14 @@
 
         @include md-up { 
 
-            width: 90%;
+            width: 100%;
             justify-content: center;
     
         }
 
         @include sm-up  {
 
-            position: unset;
-            justify-content: center;
-            margin: auto;
-            right: unset;
-            width: unset;
+            display: none;
 
         }
 
@@ -136,6 +131,15 @@
             padding: 0;
          }
 
+         @include md-up  {
+            padding: 1rem;
+
+
+
+            // &:nth-child(even) {
+            //     margin-left: 3rem;
+            //   }
+         }
 
     }
 

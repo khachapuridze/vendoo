@@ -3,12 +3,17 @@
 @import 'base/reset';
 @import 'base/typography';
 
-.footer-section {
+.footer {
+    background-color: $bg-color;
+
+    .footer-section {
 
         bottom: 0;
         width: 100%;
         background-color: $bg-color;
         margin-top: auto;
+        max-width: 131.6rem;
+        margin: auto;
 
         @include md-up {
             position: unset;
@@ -205,6 +210,6 @@
 
             }
         }
+      }
     }
 }
-

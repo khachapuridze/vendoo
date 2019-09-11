@@ -3,12 +3,12 @@
     <app-imageContainer></app-imageContainer>
     <app-infoContainer></app-infoContainer>
     <app-categories></app-categories>
-    <app-footer/>
+    <homeFooter/>
   </div>
 </template>
 
 <script>
-import Footer from './components/footer.vue'
+import homeFooter from './components/homeFooter.vue'
 import infoContainer from './components/infoContainer.vue'
 import categories from './components/categories.vue'
 import imageContainer from './components/imageContainer.vue'
@@ -16,7 +16,7 @@ import imageContainer from './components/imageContainer.vue'
 export default {
   name: 'app',
   components: {
-    'app-footer':Footer,
+    homeFooter,
     'app-infoContainer':infoContainer,
     'app-categories': categories,
     'app-imageContainer': imageContainer
