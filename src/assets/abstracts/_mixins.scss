@@ -5,19 +5,19 @@
 }
  // ესენი გამოიყენე
 @mixin xs-up {
-    @media (max-width: 22.5rem) { @content; }
+    @media (min-width: 22.5rem) { @content; }
 }
 @mixin sm-up {
-    @media (max-width: 36rem) { @content; }
+    @media (min-width: 36rem) { @content; }
 }
 @mixin md-up {
-    @media (max-width: 48rem) { @content; }
+    @media (min-width: 48rem) { @content; }
 }
 @mixin lg-up {
-    @media (max-width: 64rem) { @content; }
+    @media (min-width: 64rem) { @content; }
 }
 @mixin xl-up {
-    @media (max-width: 82rem) { @content; }
+    @media (min-width: 82rem) { @content; }
 }
 
 // mixin გამოიყენე მაშინ როცა რამე პარამეტრი გაქ გადასაცემი თორემ სხვა შემთხვევაში Extend/Inheritance იდიალურია
